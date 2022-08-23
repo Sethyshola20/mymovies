@@ -7,7 +7,6 @@ export default function Signup() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  /*const [confirmPassword, setConfirmPassword] = useState('');*/
   const [error, setError] = useState('');
   const { createUser } = UserAuth();
   const navigate = useNavigate()
@@ -51,10 +50,6 @@ export default function Signup() {
                             <div className="password">
                                 <input type="password"  id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
                             </div>
-                            {/*
-                            <div className="confirm-password">
-                                <input type="password" id="confirmPassword" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)} required/>
-    </div>*/}
                             <button className="signup-btn" type='submit'>SIGN UP</button>
                         </form>
                         <div className='sublog-container'>

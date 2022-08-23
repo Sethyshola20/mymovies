@@ -1,22 +1,21 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import { AuthProvider } from './context/Authcontext';
 import { AuthContextProvider } from './context/Authcontext';
-import PrivateRoute from "./Pages/PrivateRoute";
-import ErrorPage from './Pages/ErrorPage';
-import Login from './Pages/Login';
-import Footer from './Pages/Footer';
-import SignUp from './Pages/SignUp';
-import Profile from './Pages/Profile';
-import Home from './Pages/Home';
+import PrivateRoute from "./Components/PrivateRoute";
+import ErrorPage from './Components/ErrorPage';
+import Login from './Components/Login';
+import Footer from './Components/Footer';
+import SignUp from './Components/SignUp';
+import Profile from './Components/Profile';
+import Home from './Components/Home';
 
 function App() {
   return (
     <Router>
       <AuthContextProvider>
         <Routes>
-          <Route path='/login' index element ={<Login />} />
+          <Route path='/' index element ={<Login />} />
           <Route path='/signup' element ={<SignUp />} />
           <Route path="/profile" element={
             <PrivateRoute>

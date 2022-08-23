@@ -11,7 +11,7 @@ export default function Profile() {
   const handleLogout = async () => {
     try {
       await logout();
-      navigate('/login');
+      navigate('/');
       console.log('You are logged out')
     } catch (e) {
       console.log(e.message);

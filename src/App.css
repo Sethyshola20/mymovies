@@ -375,7 +375,13 @@ h2{
 */
 .logout-btn{
   margin-top: 2em;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  transition: all .2s ease-in;
+}
+.logout-btn:hover{
+  background-color: #141414;
+  transform: scale(0.95);
+  border-radius: 10px;
 }
 .user-email{
   font-size: 1.25rem;
@@ -441,6 +447,20 @@ button{
   border: unset;
   background-color: #F1C40F;
   color: white;
+}
+.input-update{
+  padding: .5em;
+}
+.update-btn{
+  background-color: #141414;
+  margin-left: 2vw;
+  padding: 1em;
+  border-radius: 10px;
+  transition: all .2s ease-in;
+}
+.update-btn:hover{
+  background-color: #52BE80;
+  transform: scale(1.1);
 }
 form{
   width: 100%;

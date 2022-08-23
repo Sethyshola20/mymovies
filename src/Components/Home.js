@@ -62,7 +62,7 @@ export default function Home() {
           </form>
         </div>
         <div className='movies'>
-          <h2 className="menu-heading"> MOVIES</h2>
+          {movies.length > 0 ?  <h2 className="menu-heading"> MOVIES</h2> : <div></div>}
           <div className="movielist">
             <Movielist movies={movies} favoriteComponent={Myfavourites} handleListClicked={addMovieToList} />
           </div>
