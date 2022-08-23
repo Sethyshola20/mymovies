@@ -54,7 +54,7 @@ export default function Signup() {
                         </form>
                         <div className='sublog-container'>
                             <div className='forgot'>
-                                <Link to='/login'>Already have an account ?</Link>
+                                <Link to='/mymovies/'>Already have an account ?</Link>
                             </div>
                         </div>
                     </div>

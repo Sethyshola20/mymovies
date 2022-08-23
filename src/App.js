@@ -15,7 +15,7 @@ function App() {
     <Router>
       <AuthContextProvider>
         <Routes>
-          <Route path='/' index element ={<Login />} />
+          <Route path='/mymovies/' index element ={<Login />} />
           <Route path='/signup' element ={<SignUp />} />
           <Route path="/profile" element={
             <PrivateRoute>
