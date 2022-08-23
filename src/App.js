@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//import { AuthProvider } from './context/Authcontext';
+import { AuthContextProvider } from './context/Authcontext';
+import PrivateRoute from "./Pages/PrivateRoute";
+import ErrorPage from './Pages/ErrorPage';
+import Login from './Pages/Login';
+import Footer from './Pages/Footer';
+import SignUp from './Pages/SignUp';
+import Profile from './Pages/Profile';
+import Home from './Pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AuthContextProvider>
+        <Routes>
+          <Route path='/login' index element ={<Login />} />
+          <Route path='/signup' element ={<SignUp />} />
+          <Route path="/profile" element={
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          } />
+          <Route path="/accueil" element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          } />
+          <Route path='*' element ={<ErrorPage />} />
+        </Routes>
+      </AuthContextProvider>
+      <Footer/>
+    </Router>
   );
 }
 
